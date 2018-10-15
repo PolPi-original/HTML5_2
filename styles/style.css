@@ -1,0 +1,94 @@
+:root {
+    --fontColor-1: #ffffff;
+    --fontColor-2: #333333;
+    --fontColor-3: #979797;
+    --backgroundColor-1: #2e0000;
+    --backgroundColor-2: #660000;
+    --backgroundColor-3: #76c38f;
+    --backgroundColor-4: #333333;
+    --backgroundColor-5: #2b2b2b;
+    --backgroundColor-6: #222222;
+    --fontSize-1: 12px;
+    --fontSize-2: 13px;
+    --fontSize-3: 46px;
+}
+
+html {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color:  #333333;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-areas:
+        "header header"
+        "catchyTitle imageHolder"
+        "services services"
+        "footer footer"
+}
+
+.header {
+    grid-area: header;
+    background: var(--backgroundColor-1);
+    color: var(--fontColor-1);
+}
+
+.header h1 {
+    font-size: 28px;
+    float: left;
+}
+
+.header nav {
+    float: right;
+    text-transform: uppercase;
+}
+
+.header ul {
+    font-size: var(--fontSize-2);
+    list-style-type: none;
+}
+
+.header ul a {
+    text-decoration: none;
+    color: var(--fontColor-1);
+}
+
+.header ul li {
+    display: inline;
+    margin: 30px;
+}
+
+.catchyTitle {
+    grid-area: catchyTitle;
+    background: var(--backgroundColor-1);
+    color: var(--fontColor-1);
+}
+
+.catchyTitle div {
+    padding: 100px;
+}
+
+.imageHolder {
+    grid-area: imageHolder;
+    background: var(--backgroundColor-1);
+    text-align: center;
+}
+
+.imageHolder div {
+    padding-bottom: 50px;
+    padding-left: 50px;
+}
+
+.imageHolder img {
+    width: 380px;
+    border: 20px solid var(--fontColor-3);
+    border-radius: 50%;
+}
+
+
+

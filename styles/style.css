@@ -2,93 +2,236 @@
     --fontColor-1: #ffffff;
     --fontColor-2: #333333;
     --fontColor-3: #979797;
+
+    --fontSize-1: 12px;
+    --fontSize-2: 13px;
+    --fontSize-3: 32px;
+    --fontSize-4: 46px;
+
     --backgroundColor-1: #2e0000;
     --backgroundColor-2: #660000;
     --backgroundColor-3: #76c38f;
     --backgroundColor-4: #333333;
     --backgroundColor-5: #2b2b2b;
     --backgroundColor-6: #222222;
-    --fontSize-1: 12px;
-    --fontSize-2: 13px;
-    --fontSize-3: 46px;
+    --backgroundColor-7: #ffffff;
+    --backgroundColor-8: #000000;
+
+    --marginLarge: 10%;
+
+    --paddingButton: 8px;
+    --borderRadius: 8px;
+
 }
 
 html {
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
-    color:  #333333;
-    font-size: 16px;
-    font-weight: 400;
 }
 
 .mainGrid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    grid-template-areas:
-        "header header"
-        "catchyTitle imageHolder"
-        "services services"
-        "footer footer"
+    grid-template-columns: repeat(1, 1fr);
 }
 
-.header {
-    grid-area: header;
+header {
     background: var(--backgroundColor-1);
     color: var(--fontColor-1);
 }
 
-.header h1 {
+header .headerWrap {
+    margin-left: var(--marginLarge);
+    margin-right: var(--marginLarge);
+}
+
+header .headerWrap:after{
+    content: '';
+    clear: both;
+    display: block;
+  }
+
+
+header h1 {
     font-size: 28px;
     float: left;
 }
 
-.header nav {
+header nav {
     float: right;
     text-transform: uppercase;
 }
 
-.header ul {
+header ul {
     font-size: var(--fontSize-2);
     list-style-type: none;
 }
 
-.header ul a {
+header ul a {
     text-decoration: none;
     color: var(--fontColor-1);
+    padding: var(--paddingButton);
 }
 
-.header ul li {
+header ul a:hover {
+    background: var(--backgroundColor-3);
+    border-radius: var(--borderRadius);
+}
+
+header ul li {
     display: inline;
     margin: 30px;
+    line-height: 2.5em;
+}
+
+
+.catchyTitleGrid {
+    background: var(--backgroundColor-1);
+    color: var(--fontColor-1);
 }
 
 .catchyTitle {
-    grid-area: catchyTitle;
-    background: var(--backgroundColor-1);
-    color: var(--fontColor-1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    margin-left: var(--marginLarge);
+    margin-right: var(--marginLarge);
+
 }
 
-.catchyTitle div {
-    padding: 100px;
+.catchyTitleWrap {
+    margin-left: var(--marginLarge);
+    margin-right: var(--marginLarge);
+}
+
+.catchyTitleWrap a {
+    width: 8em;;
+    text-decoration: none;
+    color: inherit;
+    background: var(--backgroundColor-3);
+    line-height: 2.5em;
+    text-align: center;
+    border-radius: var(--borderRadius);
+    padding: var(--paddingButton);
 }
 
 .imageHolder {
-    grid-area: imageHolder;
     background: var(--backgroundColor-1);
-    text-align: center;
-}
-
-.imageHolder div {
-    padding-bottom: 50px;
-    padding-left: 50px;
+    padding: 30px;
 }
 
 .imageHolder img {
     width: 380px;
-    border: 20px solid var(--fontColor-3);
+    border: 26px solid var(--fontColor-3);
     border-radius: 50%;
 }
 
+.services{
+    background: var(--backgroundColor-2);
+    color: var(--fontColor-1);
+}
+
+.servicesWrap{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-left: var(--marginLarge);
+    margin-right: var(--marginLarge);
+}
+
+.servicesDescription {
+    color: var(--fontColor-3);
+    background: var(--backgroundColor-7);
+    padding: 20px;
+    text-align: center;
+}
+
+.servicesDescription:hover {
+    background: var(--backgroundColor-3);
+    color: var(--fontColor-1);
+}
+.servicesDescription img {
+    width: 120px;
+    height: 120px;
+    background-color: var(--backgroundColor-4);
+
+
+}
+.servicesDescription .serviceTitle {
+    font-size: var(--fontSize-3);
+    color: var(--fontColor-2);
+    text-transform: uppercase;
+}
+.servicesDescription:hover .serviceTitle {
+    color: var(--fontColor-1);
+}
+
+.latestWorkTitle {
+    background: var(--backgroundColor-2);
+    color: var(--fontColor-1);
+    text-align: center;
+}
+
+.latestWorkTitleWrap{
+    margin-left: var(--marginLarge);
+    margin-right: var(--marginLarge);
+}
+
+.latestWorkTitle hr {
+    margin-top: 30px;
+}
+
+.latestWorkTitleText {
+    width: 7em;
+    background: var(--backgroundColor-4);
+    padding: var(--paddingButton);
+    border: 1px var(--fontColor-1) solid;
+    border-radius: var(--borderRadius);
+    text-transform: uppercase;
+    font-size: var(--fontSize-3);
+    margin: 0 auto;
+    margin-top: -36px;
+}
+
+.latestWorkGrid {
+    background: var(--backgroundColor-2);
+    color: var(--fontColor-1);
+}
+
+.latestWorkWrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-items: center;
+    align-items: center;
+
+    margin-left: var(--marginLarge);
+    margin-right: var(--marginLarge);
+}
+
+.latestWorDescription {
+    width: 100%;
+    border: 3px var(--fontColor-1) solid;
+    /* padding: 20px; */
+    background: var(--backgroundColor-8);
+}
+
+.latestWorDescription img{
+    /* width: calc(100% + 2 * 20px); */
+    width: 100%;
+    /* margin-top: -20px; */
+    /* margin-left: -20px; */
+}
+
+.latestWorDescription p {
+    text-align: center;
+    text-transform: uppercase;
+}
 
 

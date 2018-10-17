@@ -41,9 +41,17 @@ header {
     color: var(--fontColor-1);
 }
 
-header .headerWrap {
+.headerWrap {
     margin-left: var(--marginLarge);
     margin-right: var(--marginLarge);
+}
+
+/* @media (min-width: 992px) and (max-width: 1199px) { */
+@media (max-width: 1199px) {
+    .headerWrap {
+        margin-left: 10px;
+        margin-right: 0;
+    }
 }
 
 header .headerWrap:after{
@@ -62,6 +70,13 @@ header nav {
     float: right;
     text-transform: uppercase;
 }
+
+@media (max-width: 991px) {
+    header h1, header nav {
+        float: none;
+    }
+}
+
 
 header ul {
     font-size: var(--fontSize-2);
@@ -99,6 +114,28 @@ header ul li {
     margin-left: var(--marginLarge);
     margin-right: var(--marginLarge);
 
+}
+
+@media (max-width: 1199px) {
+    .catchyTitle {
+        margin-left: 10px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .catchyTitle {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .imageHolder {
+        grid-row: 1/2;
+    }
+    
+    .catchyTitleWrap {
+        grid-row: 2/3;
+        padding-bottom: 20px;
+    }
 }
 
 .catchyTitleWrap {

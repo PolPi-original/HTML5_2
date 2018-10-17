@@ -2,11 +2,13 @@
     --fontColor-1: #ffffff;
     --fontColor-2: #333333;
     --fontColor-3: #979797;
+    --fontColor-4: #76c38f;
 
     --fontSize-1: 12px;
     --fontSize-2: 13px;
     --fontSize-3: 32px;
     --fontSize-4: 46px;
+    --fontSize-5: 19px;
 
     --backgroundColor-1: #2e0000;
     --backgroundColor-2: #660000;
@@ -232,6 +234,64 @@ header ul li {
 .latestWorDescription p {
     text-align: center;
     text-transform: uppercase;
+}
+
+footer {
+    background: var(--backgroundColor-4);
+    color: var(--fontColor-1);
+}
+
+.footerWrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    color: var(--fontColor-3);
+    /* justify-items: center; */
+    /* align-items: center; */
+
+    margin-left: var(--marginLarge);
+    margin-right: var(--marginLarge);
+}
+
+.footerWrap h2 {
+    color: var(--fontColor-1);
+    font-size: var(--fontSize-5);
+    font-weight: 400;
+}
+
+.footerQuickLinks a {
+    text-decoration: none;
+    color: var(--fontColor-4);
+}
+
+
+
+.footerContactUs form input[type="text"], footer .footerContactUs form textarea {
+    border-radius: 5px;
+    background-color:  var(--backgroundColor-6);
+    width: 225px;
+    padding: 8px;
+    border: none;
+    display: block;
+    margin-bottom: 7px;
+}
+
+.footerContactUs form textarea {
+    height: 170px;
+}
+
+.footerContactUs form input[type="submit"] {
+    border-radius: 5px;
+    border: none;
+    /* margin: 0 auto; */
+    display: block;
+    background: var(--backgroundColor-3);
+    width: 140px;
+    height: 40px;
+    font-weight: 700;
+    font-size: 16px;
 }
 
 

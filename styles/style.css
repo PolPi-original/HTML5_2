@@ -88,6 +88,13 @@ header ul a {
     padding: var(--paddingButton);
 }
 
+@media (max-width: 991px) {
+    header ul a {
+        font-size: var(--fontSize-5);
+    }
+}
+
+
 header ul a:hover {
     background: var(--backgroundColor-3);
     border-radius: var(--borderRadius);

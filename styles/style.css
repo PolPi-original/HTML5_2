@@ -1,29 +1,26 @@
 :root {
-    --fontColor-1: #ffffff;
-    --fontColor-2: #333333;
-    --fontColor-3: #979797;
-    --fontColor-4: #76c38f;
+    /* Font color */
+    --fontColorMain: #fff;
+    --fontColorTitle: #333;
+    --fontColorMainАdditional: #979797;
+    --fontColorLinks: #76c38f;
 
-    --fontSize-1: 12px;
-    --fontSize-2: 13px;
-    --fontSize-3: 32px;
-    --fontSize-4: 46px;
-    --fontSize-5: 19px;
+    /* Font size */
+    --fontSizeHeader: 13px;
+    --fontSizeTitle: 32px;
+    --fontSizeFooterH2: 19px;
 
-    --backgroundColor-1: #2e0000;
-    --backgroundColor-2: #660000;
-    --backgroundColor-3: #76c38f;
-    --backgroundColor-4: #333333;
-    --backgroundColor-5: #2b2b2b;
-    --backgroundColor-6: #222222;
-    --backgroundColor-7: #ffffff;
-    --backgroundColor-8: #000000;
-
+    /* Background color */
+    --backgroundColorHeader: #2e0000;
+    --backgroundColorMain: #600;
+    --backgroundColorHover: #76c38f;
+    --backgroundColorFooter: #333;
+    --backgroundColorForm: #222;
+    --backgroundColorServices: #fff;
+    --backgroundColorLatestWork: #000;
     --marginLarge: 10%;
-
     --paddingButton: 8px;
     --borderRadius: 8px;
-
 }
 
 html {
@@ -37,8 +34,8 @@ html {
 }
 
 header {
-    background: var(--backgroundColor-1);
-    color: var(--fontColor-1);
+    background: var(--backgroundColorHeader);
+    color: var(--fontColorMain);
 }
 
 .headerWrap {
@@ -54,12 +51,11 @@ header {
     }
 }
 
-header .headerWrap:after{
+header .headerWrap::after {
     content: '';
     clear: both;
     display: block;
-  }
-
+}
 
 header h1 {
     font-size: 28px;
@@ -71,20 +67,19 @@ header nav {
     text-transform: uppercase;
 }
 
-
 header ul {
     list-style-type: none;
 }
 
 header ul a {
-    font-size: var(--fontSize-2);
+    font-size: var(--fontSizeHeader);
     text-decoration: none;
-    color: var(--fontColor-1);
+    color: var(--fontColorMain);
     padding: var(--paddingButton);
 }
 
 header ul a:hover {
-    background: var(--backgroundColor-3);
+    background: var(--backgroundColorHover);
     border-radius: var(--borderRadius);
 }
 
@@ -95,10 +90,11 @@ header ul li {
 }
 
 @media (max-width: 991px) {
-    header h1, header nav {
+    header h1,
+    header nav {
         float: none;
     }
-    
+
     header ul {
         padding: 0;
     }
@@ -108,10 +104,9 @@ header ul li {
     }
 }
 
-
 .catchyTitleGrid {
-    background: var(--backgroundColor-1);
-    color: var(--fontColor-1);
+    background: var(--backgroundColorHeader);
+    color: var(--fontColorMain);
 }
 
 .catchyTitle {
@@ -121,7 +116,6 @@ header ul li {
     align-items: center;
     margin-left: var(--marginLarge);
     margin-right: var(--marginLarge);
-
 }
 
 .catchyTitleWrap {
@@ -133,7 +127,7 @@ header ul li {
     width: 8em;
     text-decoration: none;
     color: inherit;
-    background: var(--backgroundColor-3);
+    background: var(--backgroundColorHover);
     line-height: 2.5em;
     text-align: center;
     border-radius: var(--borderRadius);
@@ -141,13 +135,13 @@ header ul li {
 }
 
 .imageHolder {
-    background: var(--backgroundColor-1);
+    background: var(--backgroundColorHeader);
     padding: 30px;
 }
 
 .imageHolder img {
     width: 380px;
-    border: 26px solid var(--fontColor-3);
+    border: 26px solid var(--fontColorMainАdditional);
     border-radius: 50%;
 }
 
@@ -166,19 +160,19 @@ header ul li {
     .imageHolder {
         grid-row: 1/2;
     }
-    
+
     .catchyTitleWrap {
         grid-row: 2/3;
         padding-bottom: 20px;
     }
 }
 
-.services{
-    background: var(--backgroundColor-2);
-    color: var(--fontColor-1);
+.services {
+    background: var(--backgroundColorMain);
+    color: var(--fontColorMain);
 }
 
-.servicesWrap{
+.servicesWrap {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
@@ -204,39 +198,40 @@ header ul li {
 }
 
 .servicesDescription {
-    color: var(--fontColor-3);
-    background: var(--backgroundColor-7);
+    color: var(--fontColorMainАdditional);
+    background: var(--backgroundColorServices);
     padding: 20px;
     text-align: center;
 }
 
 .servicesDescription:hover {
-    background: var(--backgroundColor-3);
-    color: var(--fontColor-1);
+    background: var(--backgroundColorHover);
+    color: var(--fontColorMain);
 }
+
 .servicesDescription img {
     width: 120px;
     height: 120px;
-    background-color: var(--backgroundColor-4);
-
-
+    background-color: var(--backgroundColorFooter);
 }
+
 .servicesDescription .serviceTitle {
-    font-size: var(--fontSize-3);
-    color: var(--fontColor-2);
+    font-size: var(--fontSizeTitle);
+    color: var(--fontColorTitle);
     text-transform: uppercase;
 }
+
 .servicesDescription:hover .serviceTitle {
-    color: var(--fontColor-1);
+    color: var(--fontColorMain);
 }
 
 .latestWorkTitle {
-    background: var(--backgroundColor-2);
-    color: var(--fontColor-1);
+    background: var(--backgroundColorMain);
+    color: var(--fontColorMain);
     text-align: center;
 }
 
-.latestWorkTitleWrap{
+.latestWorkTitleWrap {
     margin-left: var(--marginLarge);
     margin-right: var(--marginLarge);
 }
@@ -254,19 +249,19 @@ header ul li {
 
 .latestWorkTitleText {
     width: 7em;
-    background: var(--backgroundColor-4);
+    background: var(--backgroundColorFooter);
     padding: var(--paddingButton);
-    border: 1px var(--fontColor-1) solid;
+    border: 1px var(--fontColorMain) solid;
     border-radius: var(--borderRadius);
     text-transform: uppercase;
-    font-size: var(--fontSize-3);
+    font-size: var(--fontSizeTitle);
     margin: 0 auto;
     margin-top: -36px;
 }
 
 .latestWorkGrid {
-    background: var(--backgroundColor-2);
-    color: var(--fontColor-1);
+    background: var(--backgroundColorMain);
+    color: var(--fontColorMain);
 }
 
 .latestWorkWrap {
@@ -277,7 +272,6 @@ header ul li {
     padding-bottom: 20px;
     justify-items: center;
     align-items: center;
-
     margin-left: var(--marginLarge);
     margin-right: var(--marginLarge);
 }
@@ -297,11 +291,11 @@ header ul li {
 
 .latestWorDescription {
     width: 100%;
-    border: 3px var(--fontColor-1) solid;
-    background: var(--backgroundColor-8);
+    border: 3px var(--fontColorMain) solid;
+    background: var(--backgroundColorLatestWork);
 }
 
-.latestWorDescription img{
+.latestWorDescription img {
     width: 100%;
 }
 
@@ -311,8 +305,8 @@ header ul li {
 }
 
 footer {
-    background: var(--backgroundColor-4);
-    color: var(--fontColor-1);
+    background: var(--backgroundColorFooter);
+    color: var(--fontColorMain);
 }
 
 .footerWrap {
@@ -348,19 +342,20 @@ footer {
 }
 
 .footerWrap h2 {
-    color: var(--fontColor-1);
-    font-size: var(--fontSize-5);
+    color: var(--fontColorMain);
+    font-size: var(--fontSizeFooterH2);
     font-weight: 400;
 }
 
 .footerQuickLinks a {
     text-decoration: none;
-    color: var(--fontColor-4);
+    color: var(--fontColorLinks);
 }
 
-.footerContactUs form input[type="text"], .footerContactUs form textarea {
+.footerContactUs form input[type="text"],
+.footerContactUs form textarea {
     border-radius: 5px;
-    background-color:  var(--backgroundColor-6);
+    background-color: var(--backgroundColorForm);
     width: 225px;
     padding: 8px;
     border: none;
@@ -376,11 +371,17 @@ footer {
     border-radius: 5px;
     border: none;
     display: block;
-    background: var(--backgroundColor-3);
+    background: var(--backgroundColorHover);
     width: 140px;
     height: 40px;
     font-weight: 700;
     font-size: 16px;
 }
 
+.hidden {
+    opacity: 0;
+}
 
+.visible {
+    opacity: 1;
+}
